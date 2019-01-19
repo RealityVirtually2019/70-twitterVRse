@@ -13,6 +13,7 @@ public class ExampleScript : MonoBehaviour {
         //Bird Group 1
 
         var trend1Birds = new List<GameObject>();
+        // Note that there is a sample bird
         // Intiazize the object and add it to the collection
         //the code might not be pretty but since the locations are very precise to each bird, we did it one by one
         //trend 1
