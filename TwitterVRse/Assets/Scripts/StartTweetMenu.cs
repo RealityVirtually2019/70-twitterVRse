@@ -19,7 +19,7 @@ public class StartTweetMenu : MonoBehaviour
         DebugUIBuilder.instance.AddLabel("3. #SnowstormBooks");
         DebugUIBuilder.instance.AddLabel("4. #SaturdayThoughts");
         DebugUIBuilder.instance.AddLabel("5. #WomensMarch");
-        DebugUIBuilder.instance.AddButton("Continue", LoadAvatarGrab);
+        DebugUIBuilder.instance.AddButton("Continue", LoadBirdScene);
         DebugUIBuilder.instance.Show();
     }
 
@@ -47,9 +47,9 @@ public class StartTweetMenu : MonoBehaviour
     }
 
     #region Scene Load Callbacks
-    void LoadAvatarGrab()
+    void LoadBirdScene()
     {
-        LoadScene("AvatarGrab");
+        LoadScene("BirdScene");
     }
     #endregion
 }
