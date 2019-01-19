@@ -3,7 +3,7 @@ using System.Collections;
 
 public class livingBirdsDemoScript : MonoBehaviour {
 	public lb_BirdController birdControl;
-	public Camera camera1;
+	public Camera camera1;      
 	public Camera camera2;
 
 	Camera currentCamera;
