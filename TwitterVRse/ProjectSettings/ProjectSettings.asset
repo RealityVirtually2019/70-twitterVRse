@@ -151,7 +151,8 @@ PlayerSettings:
   resolutionScalingMode: 0
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
-  applicationIdentifier: {}
+  applicationIdentifier:
+    Standalone: com.oculus.UnitySample
   buildNumber: {}
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 16
@@ -261,7 +262,7 @@ PlayerSettings:
   m_BuildTargetBatching:
   - m_BuildTarget: Standalone
     m_StaticBatching: 1
-    m_DynamicBatching: 0
+    m_DynamicBatching: 1
   - m_BuildTarget: tvOS
     m_StaticBatching: 1
     m_DynamicBatching: 0
@@ -289,7 +290,7 @@ PlayerSettings:
     m_Automatic: 1
   m_BuildTargetVRSettings:
   - m_BuildTarget: Standalone
-    m_Enabled: 0
+    m_Enabled: 1
     m_Devices:
     - Oculus
     - OpenVR
@@ -575,7 +576,7 @@ PlayerSettings:
   scriptingBackend: {}
   il2cppCompilerConfiguration: {}
   incrementalIl2cppBuild: {}
-  allowUnsafeCode: 0
+  allowUnsafeCode: 1
   additionalIl2CppArgs: 
   scriptingRuntimeVersion: 0
   apiCompatibilityLevelPerPlatform: {}
