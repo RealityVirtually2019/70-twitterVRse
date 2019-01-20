@@ -37,7 +37,8 @@ public class StartTweetMenu : MonoBehaviour
         text.enabled = true;
         // Waiting to prevent "pop" to new scene
         yield return new WaitForSeconds(1f);
-        // Load Scene and wait til complete
+        // Load Scene and wait til complet
+       
         AsyncOperation asyncLoad = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(sceneName);
         while (!asyncLoad.isDone)
         {
