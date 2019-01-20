@@ -13,12 +13,14 @@ public class StartTweetMenu : MonoBehaviour
     void Start()
     {
         //Those text would be replaced by rest api data
+        //we have the trend retrieving api working but since we cannot to tts we decide to hard code it
         DebugUIBuilder.instance.AddLabel("TwitterVRse - Today's Trends");
-        DebugUIBuilder.instance.AddLabel("1. #Shutdown");
-        DebugUIBuilder.instance.AddLabel("2. #SaturdayMorning");
-        DebugUIBuilder.instance.AddLabel("3. #SnowstormBooks");
-        DebugUIBuilder.instance.AddLabel("4. #SaturdayThoughts");
-        DebugUIBuilder.instance.AddLabel("5. #WomensMarch");
+        DebugUIBuilder.instance.AddLabel("Press Button to Proceed");
+        DebugUIBuilder.instance.AddLabel("1. #BewaretheFuries");
+        DebugUIBuilder.instance.AddLabel("2. #Championship_Game");
+        DebugUIBuilder.instance.AddLabel("3. #fedspeech");
+        DebugUIBuilder.instance.AddLabel("4. #MA_Snow");
+        DebugUIBuilder.instance.AddLabel("5. #SundayMorning");
         DebugUIBuilder.instance.AddButton("Continue", LoadBirdScene);
         DebugUIBuilder.instance.Show();
     }
