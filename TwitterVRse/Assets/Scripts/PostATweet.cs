@@ -5,15 +5,23 @@ using Twity;
 
 public class PostATweet : MonoBehaviour {
 
-  public String post_content; 
+  public string post_content = "hi hi hi"; 
 
-  void Start () {
+  public void start () {
+    Debug.Log("click click click"); 
     Twity.Oauth.consumerKey       = "sjbkyhDmiRzqR4yD176q3M9yK";
     Twity.Oauth.consumerSecret    = "igeQG0t96EiCbrb2c1b7mUR7vIjuWXowoumGf5cbCY25BXUt0Z";
     Twity.Oauth.accessToken       = "3222732536-u7fpRbYdExxeSIipflayJaPFrAu3lZfHSPTowO0";
     Twity.Oauth.accessTokenSecret = "zP18sFkSGTadcvpCSW6v9lLsqll4FyOzg3r805UX3oQWI";
+    Twet();
   }
 
+   public void update(){
+       if (Input.GetKeyDown("space")){
+           Debug.Log("crycrycry"); 
+           this.Twet();
+       }
+   }
   /*  public void PostTweet()
   {
     Debug.Log("tweet tweet"); 
@@ -31,6 +39,7 @@ public class PostATweet : MonoBehaviour {
   } */
 
    public void Twet() {
+        Debug.Log("hi hi hi"); 
         Dictionary<string, string> parameters = new Dictionary<string, string>();
         parameters ["status"] = post_content;
         StartCoroutine (Twity.Client.Post ("statuses/update", parameters, TweetCallback));
