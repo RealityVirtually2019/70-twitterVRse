@@ -54,7 +54,7 @@ public class BirdSceneSearchBird : MonoBehaviour
             selectedBird = GameObject.FindGameObjectsWithTag(hit.transform.tag);
             Debug.Log(selectedBird);
             
-            selectedBird[0].transform.localScale=new Vector3(2.0F, 2.0F, 2.0F);
+            selectedBird[0].transform.localScale=new Vector3 (1.5F, 1.5F, 1.5F);
 
 
             if (OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, OVRInput.Controller.RTouch) >= 0.5f)
