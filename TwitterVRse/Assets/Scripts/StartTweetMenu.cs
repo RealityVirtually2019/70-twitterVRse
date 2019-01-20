@@ -50,7 +50,7 @@ public class StartTweetMenu : MonoBehaviour
     #region Scene Load Callbacks
     void LoadBirdScene()
     {
-        LoadScene("BirdScene");
+        LoadScene("BirdEnvironment");
     }
     #endregion
 }

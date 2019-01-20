@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/Archive/BirdScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/StartSceneMenu.unity
+    guid: 862285b697b4d5d4fa8f019b0a70cdc7
+  - enabled: 1
+    path: Assets/Scenes/BirdEnvironment.unity
+    guid: d48b3526c8bedcd43b9b3464d394ed36
   m_configObjects: {}

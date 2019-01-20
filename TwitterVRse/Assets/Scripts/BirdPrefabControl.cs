@@ -55,8 +55,33 @@ public class BirdPrefabControl : MonoBehaviour
         trend4Birds.Add(bird14);
         trend5Birds.Add(bird15);
 
+        foreach (GameObject bird in trend1Birds)
+        {
+            bird.transform.localScale = new Vector3(0.29288f, 0.29288f, 0.29288f);
+        }
+        foreach (GameObject bird in trend2Birds)
+        {
+            bird.transform.localScale = new Vector3(0.29288f, 0.29288f, 0.29288f);
+        }
+        foreach (GameObject bird in trend3Birds)
+        {
+            bird.transform.localScale = new Vector3(0.29288f, 0.29288f, 0.29288f);
+        }
+        foreach (GameObject bird in trend4Birds)
+        {
+            bird.transform.localScale = new Vector3(0.29288f, 0.29288f, 0.29288f);
+        }
+        foreach (GameObject bird in trend5Birds)
+        {
+            bird.transform.localScale = new Vector3(0.29288f, 0.29288f, 0.29288f);
+        }
 
-        bird1.transform.position = new Vector3(1, 1, 1);
+
+
+        bird1.transform.position = new Vector3(304.507f, 8.76f, 140.116f);
+        Quaternion bird1Rotation = Quaternion.Euler(1.544f, -30.45f, 23.463f);
+        bird1.transform.rotation = bird1Rotation;
+        
         bird2.transform.position = new Vector3(4, 1, 1);
         bird3.transform.position = new Vector3(7, 1, 1);
         bird4.transform.position = new Vector3(10, 1, 1);
