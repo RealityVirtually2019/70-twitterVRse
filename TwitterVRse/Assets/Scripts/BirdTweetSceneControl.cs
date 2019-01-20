@@ -17,13 +17,13 @@ public class BirdTweetSceneControl : MonoBehaviour
 
     //Speech Recogntion using Cortana
     //To trigger
-    [SerializeField]
-    private TextMesh m_Hypotheses;
+    //[SerializeField]
+    //private TextMesh m_Hypotheses;
 
     [SerializeField]
     private TextMesh m_Recognitions;
 
-    private DictationRecognizer m_DictationRecognizer;
+    public DictationRecognizer m_DictationRecognizer;
 
 
     void Start()
@@ -58,16 +58,18 @@ public class BirdTweetSceneControl : MonoBehaviour
             if (OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, OVRInput.Controller.RTouch) >= 0.5f)
             {
                 selectedTweetOptions[0].transform.Translate(1, 1, 1);
-                Twet();
+                //Twet();
                 StartDictation();
-
             }
+            
+            //EndDiction();
         }
         else
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.yellow);
             //Debug.Log("Did not Hit"); 
             selectedTweetOptions[0].transform.localScale = new Vector3(1.0F, 1.0F, 1.0F);
+
         }
 
     }
@@ -101,13 +103,25 @@ public class BirdTweetSceneControl : MonoBehaviour
         {
             Debug.LogFormat("Dictation result: {0}", text);
             m_Recognitions.text += text + "\n";
+            Debug.Log("text length: " + m_Recognitions.text.Length);
+            Debug.Log(OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, OVRInput.Controller.RTouch));
+
+            if (OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, OVRInput.Controller.RTouch) <= 0.5f)
+            {
+                m_DictationRecognizer.Stop();
+                Debug.Log("recognition stopped");
+                post_content = m_Recognitions.text;
+                Twet();
+            }
+
         };
 
-        m_DictationRecognizer.DictationHypothesis += (text) =>
+        /*m_DictationRecognizer.DictationHypothesis += (text) =>
         {
             Debug.LogFormat("Dictation hypothesis: {0}", text);
             m_Hypotheses.text += text;
-        };
+        };*/
+
 
         m_DictationRecognizer.DictationComplete += (completionCause) =>
         {
@@ -121,7 +135,12 @@ public class BirdTweetSceneControl : MonoBehaviour
         };
 
         m_DictationRecognizer.Start();
+
     }
 
+    //void EndDiction()
+    //{
+    //    m_DictationRecognizer.Stop();
+    //}
 
 }
