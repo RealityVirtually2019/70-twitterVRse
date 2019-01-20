@@ -82,20 +82,37 @@ public class BirdPrefabControl : MonoBehaviour
         Quaternion bird1Rotation = Quaternion.Euler(1.544f, -30.45f, 23.463f);
         bird1.transform.rotation = bird1Rotation;
         
-        bird2.transform.position = new Vector3(4, 1, 1);
-        bird3.transform.position = new Vector3(7, 1, 1);
-        bird4.transform.position = new Vector3(10, 1, 1);
-        bird5.transform.position = new Vector3(13, 1, 1);
-        bird6.transform.position = new Vector3(13, 1, 1);
-        bird7.transform.position = new Vector3(13, 1, 1);
-        bird8.transform.position = new Vector3(13, 1, 1);
-        bird9.transform.position = new Vector3(13, 1, 1);
-        bird10.transform.position = new Vector3(13, 1, 1);
-        bird11.transform.position = new Vector3(13, 1, 1);
-        bird12.transform.position = new Vector3(13, 1, 1);
-        bird13.transform.position = new Vector3(13, 1, 1);
-        bird14.transform.position = new Vector3(13, 1, 1);
-        bird15.transform.position = new Vector3(33, 1, 1);
+        bird2.transform.position = new Vector3(303.41f, 8.69f, 135.939f);
+        Quaternion bird2Rotation = Quaternion.Euler(1.544f, -100.065f, 23.463f);
+        bird2.transform.rotation = bird2Rotation;
+
+        bird3.transform.position = new Vector3(298.8185f, 8.70f, 132.88f);
+        Quaternion bird3Rotation = Quaternion.Euler(3.561f, -202.993f, 28.104f);
+        bird3.transform.rotation = bird3Rotation;
+
+        bird4.transform.position = new Vector3(300.6756f, 21.5522f, 136.1568f);
+        Quaternion bird4Rotation = Quaternion.Euler(-5.273f, -204.4f, 31.857f);
+        bird4.transform.rotation = bird4Rotation;
+
+        bird5.transform.position = new Vector3(303.5669f, 21.55f, 139.8469f);
+        Quaternion bird5Rotation = Quaternion.Euler(-5.273f, -143.524f, 31.858f);
+        bird5.transform.rotation = bird5Rotation;
+
+        bird6.transform.position = new Vector3(276.55f, 11.31f, 128.44f);
+        Quaternion bird6Rotation = Quaternion.Euler(-5.273f, -58.896f, 31.858f);
+        bird6.transform.rotation = bird6Rotation;
+
+        bird7.transform.position = new Vector3(299.8f, 8.69f, 138.92f);
+        Quaternion bird7Rotation = Quaternion.Euler(-1.563f, -13.772f, 16.138f);
+        bird7.transform.rotation = bird7Rotation;
+
+        bird8.transform.position = new Vector3(274.0538f, 5.91f, 98.82f);
+        Quaternion bird8Rotation = Quaternion.Euler(2.451f, 100.881f, 18.317f);
+        bird8.transform.rotation = bird8Rotation;
+
+        //bird9.transform.position = new Vector3()
+
+
     }
 
 
