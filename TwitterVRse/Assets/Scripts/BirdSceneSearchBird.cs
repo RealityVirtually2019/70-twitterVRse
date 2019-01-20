@@ -6,6 +6,10 @@ using UnityEngine;
 
 public class BirdSceneSearchBird : MonoBehaviour
 {
+
+
+    public GameObject[] selectedBird = null;
+
     void Update()
     {
         // Bit shift the index of the layer (8) to get a bit mask
@@ -35,7 +39,8 @@ public class BirdSceneSearchBird : MonoBehaviour
         Debug.DrawRay(this.gameObject.transform.position, transform.TransformDirection(this.gameObject.transform.forward) * 1000, Color.yellow);
         */
         // Does the ray intersect any objects excluding the player layer
-        //Debug.Log("hit");   
+        //Debug.Log("hit");  
+        
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity))
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.red);
@@ -45,6 +50,14 @@ public class BirdSceneSearchBird : MonoBehaviour
             {
                 Debug.Log("Confirm!!!!!");
                 Debug.Log(hit.transform.tag);
+                //if (null == null)
+                //{
+                Debug.Log("birds detected by tags");
+                selectedBird = GameObject.FindGameObjectsWithTag(hit.transform.tag);
+                Debug.Log(selectedBird);
+                selectedBird[0].transform.Translate(1, 1, 1);
+
+                //}
             }
         }
         else
