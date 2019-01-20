@@ -1,14 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Twity;
 
 // C# example.
 
-public class BirdSceneSearchBird : MonoBehaviour
+public class BirdTweetSceneControl : MonoBehaviour
 {
 
 
-    public GameObject[] selectedBird = null;
+    public GameObject[] selectedTweetOptions = null;
+
+    public string post_content = "hhi";
+
+
+    void Start()
+    {
+        Twity.Oauth.consumerKey = "sjbkyhDmiRzqR4yD176q3M9yK";
+        Twity.Oauth.consumerSecret = "igeQG0t96EiCbrb2c1b7mUR7vIjuWXowoumGf5cbCY25BXUt0Z";
+        Twity.Oauth.accessToken = "3222732536-u7fpRbYdExxeSIipflayJaPFrAu3lZfHSPTowO0";
+        Twity.Oauth.accessTokenSecret = "zP18sFkSGTadcvpCSW6v9lLsqll4FyOzg3r805UX3oQWI";
+    }
+
+
 
     void Update()
     {
@@ -40,7 +54,7 @@ public class BirdSceneSearchBird : MonoBehaviour
         */
         // Does the ray intersect any objects excluding the player layer
         //Debug.Log("hit");  
-        
+
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity))
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.red);
@@ -53,9 +67,10 @@ public class BirdSceneSearchBird : MonoBehaviour
                 //if (null == null)
                 //{
                 Debug.Log("birds detected by tags");
-                selectedBird = GameObject.FindGameObjectsWithTag(hit.transform.tag);
-                Debug.Log(selectedBird);
-                selectedBird[0].transform.Translate(1, 1, 1);
+                selectedTweetOptions = GameObject.FindGameObjectsWithTag(hit.transform.tag);
+                Debug.Log(selectedTweetOptions);
+                selectedTweetOptions[0].transform.Translate(1, 1, 1);
+                Twet();
 
                 //}
             }
@@ -67,5 +82,26 @@ public class BirdSceneSearchBird : MonoBehaviour
         }
     }
 
+
+    void Twet()
+    {
+        Dictionary<string, string> parameters = new Dictionary<string, string>();
+        parameters["status"] = post_content;
+        StartCoroutine(Twity.Client.Post("statuses/update", parameters, TweetCallback));
+        Debug.Log("success");
+    }
+
+    void TweetCallback(bool success, string response)
+    {
+        if (success)
+        {
+            Debug.Log(response);
+            //Tweet tweet = JsonUtility.FromJson<Tweet> (response);
+        }
+        else
+        {
+            Debug.Log(response);
+        }
+    }
 
 }
