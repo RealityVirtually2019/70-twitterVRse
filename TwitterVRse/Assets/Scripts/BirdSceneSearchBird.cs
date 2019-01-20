@@ -46,24 +46,27 @@ public class BirdSceneSearchBird : MonoBehaviour
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.red);
             //Debug.Log("Did Hit");
             //Debug.Log(hit);
+            Debug.Log("Confirm!!!!!");
+            Debug.Log(hit.transform.tag);
+            //if (null == null)
+            //{
+            Debug.Log("birds detected by tags");
+            selectedBird = GameObject.FindGameObjectsWithTag(hit.transform.tag);
+            Debug.Log(selectedBird);
+            
+            selectedBird[0].transform.localScale=new Vector3(2.0F, 2.0F, 2.0F);
+
+
             if (OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, OVRInput.Controller.RTouch) >= 0.5f)
             {
-                Debug.Log("Confirm!!!!!");
-                Debug.Log(hit.transform.tag);
-                //if (null == null)
-                //{
-                Debug.Log("birds detected by tags");
-                selectedBird = GameObject.FindGameObjectsWithTag(hit.transform.tag);
-                Debug.Log(selectedBird);
                 selectedBird[0].transform.Translate(1, 1, 1);
-
-                //}
             }
         }
         else
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.yellow);
             //Debug.Log("Did not Hit");
+            selectedBird[0].transform.localScale = new Vector3(1.0F, 1.0F, 1.0F);
         }
     }
 

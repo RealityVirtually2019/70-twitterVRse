@@ -47,19 +47,16 @@ public class ExampleScript : MonoBehaviour {
         bird4.transform.position = new Vector3(10, 1, 1);
         bird5.transform.position = new Vector3(13, 1, 1);
 
-
-        var component = bird1.GetComponent<TextMesh>();
-        component.text = "Some string";
         StartDictation();
     }
     
     //Speech Recogntion using Cortana
     //To trigger
     [SerializeField]
-    private Text m_Hypotheses;
+    private TextMesh m_Hypotheses;
 
     [SerializeField]
-    private Text m_Recognitions;
+    private TextMesh m_Recognitions;
 
     private DictationRecognizer m_DictationRecognizer;
 
