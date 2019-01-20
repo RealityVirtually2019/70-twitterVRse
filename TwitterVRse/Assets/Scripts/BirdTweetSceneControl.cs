@@ -13,7 +13,7 @@ public class BirdTweetSceneControl : MonoBehaviour
 
     public GameObject[] selectedTweetOptions = null;
 
-    public string post_content;
+    public string post_content = null;
 
     //Speech Recogntion using Cortana
     //To trigger
@@ -38,7 +38,7 @@ public class BirdTweetSceneControl : MonoBehaviour
     void Update()
     {
         RaycastHit hit;
-       
+
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity))
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.red);
@@ -61,15 +61,16 @@ public class BirdTweetSceneControl : MonoBehaviour
                 //Twet();
                 StartDictation();
             }
-            
+
             //EndDiction();
         }
         else
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.yellow);
             //Debug.Log("Did not Hit"); 
-            selectedTweetOptions[0].transform.localScale = new Vector3(1.0F, 1.0F, 1.0F);
-
+            if (selectedTweetOptions[0] != null){
+                selectedTweetOptions[0].transform.localScale = new Vector3(1.0F, 1.0F, 1.0F);
+            }
         }
 
     }
@@ -99,6 +100,7 @@ public class BirdTweetSceneControl : MonoBehaviour
     {
         m_DictationRecognizer = new DictationRecognizer();
 
+     
         m_DictationRecognizer.DictationResult += (text, confidence) =>
         {
             Debug.LogFormat("Dictation result: {0}", text);
@@ -106,7 +108,7 @@ public class BirdTweetSceneControl : MonoBehaviour
             Debug.Log("text length: " + m_Recognitions.text.Length);
             Debug.Log(OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, OVRInput.Controller.RTouch));
 
-            if (OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, OVRInput.Controller.RTouch) <= 0.5f)
+            if (OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, OVRInput.Controller.RTouch) <= 0.2f)
             {
                 m_DictationRecognizer.Stop();
                 Debug.Log("recognition stopped");
@@ -135,6 +137,7 @@ public class BirdTweetSceneControl : MonoBehaviour
         };
 
         m_DictationRecognizer.Start();
+
 
     }
 
