@@ -731,23 +731,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 387757217}
   m_Mesh: {fileID: 4300010, guid: 3f38dbcf1827a49358369a6de0222b7c, type: 3}
---- !u!1 &422579296 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 195418, guid: ba1fa4a8c66106b4988c88fe4b8e8502,
-    type: 2}
-  m_PrefabInternal: {fileID: 1747725330}
---- !u!114 &422579297
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 422579296}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1df9929b9ac4fd449aa1d0f9f946a6a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectedBird: []
 --- !u!1 &434633393
 GameObject:
   m_ObjectHideFlags: 0
@@ -1111,6 +1094,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 610662197}
   m_Mesh: {fileID: 4300000, guid: 3f38dbcf1827a49358369a6de0222b7c, type: 3}
+--- !u!1 &695725693 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 195418, guid: ba1fa4a8c66106b4988c88fe4b8e8502,
+    type: 2}
+  m_PrefabInternal: {fileID: 1747725330}
+--- !u!114 &695725694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 695725693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1df9929b9ac4fd449aa1d0f9f946a6a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedBird: []
 --- !u!1 &704097789
 GameObject:
   m_ObjectHideFlags: 0

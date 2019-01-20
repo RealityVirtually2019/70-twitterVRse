@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BirdEnvironment.unity
     guid: d48b3526c8bedcd43b9b3464d394ed36
+  - enabled: 1
+    path: Assets/Scenes/BirdTalk.unity
+    guid: dd6ba043444e13e4785833ec511b86d8
   m_configObjects: {}
