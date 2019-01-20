@@ -35,22 +35,22 @@ public class BirdSceneSearchBird : MonoBehaviour
         Debug.DrawRay(this.gameObject.transform.position, transform.TransformDirection(this.gameObject.transform.forward) * 1000, Color.yellow);
         */
         // Does the ray intersect any objects excluding the player layer
-        Debug.Log("hit");   
+        //Debug.Log("hit");   
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity))
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.red);
-            Debug.Log("Did Hit");
-            Debug.Log(hit);
+            //Debug.Log("Did Hit");
+            //Debug.Log(hit);
             if (OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, OVRInput.Controller.RTouch) >= 0.5f)
             {
                 Debug.Log("Confirm!!!!!");
-                
+                Debug.Log(hit.transform.tag);
             }
         }
         else
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.yellow);
-            Debug.Log("Did not Hit");
+            //Debug.Log("Did not Hit");
         }
     }
 }
