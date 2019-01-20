@@ -110,7 +110,33 @@ public class BirdPrefabControl : MonoBehaviour
         Quaternion bird8Rotation = Quaternion.Euler(2.451f, 100.881f, 18.317f);
         bird8.transform.rotation = bird8Rotation;
 
-        //bird9.transform.position = new Vector3()
+        bird9.transform.position = new Vector3(278.182f, 7.173f, 98.86589f);
+        Quaternion bird9Rotation = Quaternion.Euler(2.451f, 164.449f, 18.317f);
+        bird9.transform.rotation = bird9Rotation;
+
+        bird10.transform.position = new Vector3(286.119f, 10.74f, 107.1731f);
+        Quaternion bird10Rotation = Quaternion.Euler(2.451f, 57.936f, 18.317f);
+        bird10.transform.rotation = bird10Rotation;
+
+        bird11.transform.position = new Vector3(286.3773f, 8.8f, 107.0984f);
+        Quaternion bird11Rotation = Quaternion.Euler(2.451f, 116.313f, 18.317f);
+        bird11.transform.rotation = bird11Rotation;
+
+        bird12.transform.position = new Vector3(282.9201f, 12.06f, 107.2063f);
+        Quaternion bird12Rotation = Quaternion.Euler(2.451f, 142.884f, 18.317f);
+        bird12.transform.rotation = bird12Rotation;
+
+        bird13.transform.position = new Vector3(277.76f, 2.28f, 104.5306f);
+        Quaternion bird13Rotation = Quaternion.Euler(12.423f, 116.246f, 9.406f);
+        bird13.transform.rotation = bird13Rotation;
+
+        bird14.transform.position = new Vector3(275.1467f, 2.280981f, 104.4089f);
+        Quaternion bird14Rotation = Quaternion.Euler(4.342f, 68.006f, 9.306001f);
+        bird14.transform.rotation = bird14Rotation;
+
+        bird15.transform.position = new Vector3(261.23f, 7.65257f, 98.62321f);
+        Quaternion bird15Rotation = Quaternion.Euler(-1.6f, 101.036f, 39.008f);
+        bird15.transform.rotation = bird15Rotation;
 
 
     }

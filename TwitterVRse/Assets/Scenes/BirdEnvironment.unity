@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 2bd8959f5fbd3644aa33af1a155fc147, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4449527, g: 0.48868984, b: 0.54223305, a: 1}
+  m_IndirectSpecularColor: {r: 0.3366174, g: 0.76338685, b: 1.2954595, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -744,23 +744,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &952615130 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100032, guid: 5d9f75c0b2a624647ab965034db06b2f,
-    type: 3}
-  m_PrefabInternal: {fileID: 1252524311}
---- !u!114 &952615131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 952615130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23c76945d5430a94da8723f256bd09de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabBird: {fileID: 1149591023840262, guid: 535af90f37e39ef41bc2d1566d9696b9, type: 2}
 --- !u!1 &958215231
 GameObject:
   m_ObjectHideFlags: 0
@@ -1232,44 +1215,46 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 400032, guid: 5d9f75c0b2a624647ab965034db06b2f, type: 3}
+    - target: {fileID: 4978622625912114, guid: b612935b483c32b4ab44bba7c7845a1c, type: 2}
       propertyPath: m_LocalPosition.x
       value: 298.5
       objectReference: {fileID: 0}
-    - target: {fileID: 400032, guid: 5d9f75c0b2a624647ab965034db06b2f, type: 3}
+    - target: {fileID: 4978622625912114, guid: b612935b483c32b4ab44bba7c7845a1c, type: 2}
       propertyPath: m_LocalPosition.y
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 400032, guid: 5d9f75c0b2a624647ab965034db06b2f, type: 3}
+    - target: {fileID: 4978622625912114, guid: b612935b483c32b4ab44bba7c7845a1c, type: 2}
       propertyPath: m_LocalPosition.z
       value: 122.5
       objectReference: {fileID: 0}
-    - target: {fileID: 400032, guid: 5d9f75c0b2a624647ab965034db06b2f, type: 3}
+    - target: {fileID: 4978622625912114, guid: b612935b483c32b4ab44bba7c7845a1c, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 400032, guid: 5d9f75c0b2a624647ab965034db06b2f, type: 3}
+    - target: {fileID: 4978622625912114, guid: b612935b483c32b4ab44bba7c7845a1c, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 400032, guid: 5d9f75c0b2a624647ab965034db06b2f, type: 3}
+    - target: {fileID: 4978622625912114, guid: b612935b483c32b4ab44bba7c7845a1c, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 400032, guid: 5d9f75c0b2a624647ab965034db06b2f, type: 3}
+    - target: {fileID: 4978622625912114, guid: b612935b483c32b4ab44bba7c7845a1c, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 400032, guid: 5d9f75c0b2a624647ab965034db06b2f, type: 3}
+    - target: {fileID: 4978622625912114, guid: b612935b483c32b4ab44bba7c7845a1c, type: 2}
       propertyPath: m_RootOrder
       value: 16
       objectReference: {fileID: 0}
-    - target: {fileID: 400030, guid: 5d9f75c0b2a624647ab965034db06b2f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -30.6
-      objectReference: {fileID: 0}
+    - target: {fileID: 114315479647761242, guid: b612935b483c32b4ab44bba7c7845a1c,
+        type: 2}
+      propertyPath: prefabBird
+      value: 
+      objectReference: {fileID: 1069007356031398, guid: b612935b483c32b4ab44bba7c7845a1c,
+        type: 2}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5d9f75c0b2a624647ab965034db06b2f, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: b612935b483c32b4ab44bba7c7845a1c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1376485109
 GameObject:
