@@ -1,15 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEditor;
-using UnityEngine.Windows.Speech;
 
+public class BirdPrefabControl : MonoBehaviour
+{
 
-public class ExampleScript : MonoBehaviour {
     public GameObject prefabBird;
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         //Bird Group 1
 
         var trend1Birds = new List<GameObject>();
@@ -29,11 +28,11 @@ public class ExampleScript : MonoBehaviour {
         var bird9 = Instantiate(prefabBird);
         //trend 3
         var bird10 = Instantiate(prefabBird);
-        var bird11= Instantiate(prefabBird);
+        var bird11 = Instantiate(prefabBird);
         var bird12 = Instantiate(prefabBird);
         //trend 1
-        var bird13= Instantiate(prefabBird);
-        var bird14= Instantiate(prefabBird);
+        var bird13 = Instantiate(prefabBird);
+        var bird14 = Instantiate(prefabBird);
         //trend 1
         var bird15 = Instantiate(prefabBird);
         trend1Birds.Add(bird1);
@@ -47,9 +46,6 @@ public class ExampleScript : MonoBehaviour {
         bird4.transform.position = new Vector3(10, 1, 1);
         bird5.transform.position = new Vector3(13, 1, 1);
     }
-    
-    // Update is called once per frame
-    void Update () {
-		
-	}
+
+
 }
