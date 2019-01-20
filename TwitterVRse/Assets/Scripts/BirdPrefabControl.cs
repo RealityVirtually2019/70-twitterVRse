@@ -61,6 +61,16 @@ public class BirdPrefabControl : MonoBehaviour
         bird3.transform.position = new Vector3(7, 1, 1);
         bird4.transform.position = new Vector3(10, 1, 1);
         bird5.transform.position = new Vector3(13, 1, 1);
+        bird6.transform.position = new Vector3(13, 1, 1);
+        bird7.transform.position = new Vector3(13, 1, 1);
+        bird8.transform.position = new Vector3(13, 1, 1);
+        bird9.transform.position = new Vector3(13, 1, 1);
+        bird10.transform.position = new Vector3(13, 1, 1);
+        bird11.transform.position = new Vector3(13, 1, 1);
+        bird12.transform.position = new Vector3(13, 1, 1);
+        bird13.transform.position = new Vector3(13, 1, 1);
+        bird14.transform.position = new Vector3(13, 1, 1);
+        bird15.transform.position = new Vector3(33, 1, 1);
     }
 
 
