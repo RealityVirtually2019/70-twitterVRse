@@ -12,6 +12,10 @@ public class BirdPrefabControl : MonoBehaviour
         //Bird Group 1
 
         var trend1Birds = new List<GameObject>();
+        var trend2Birds = new List<GameObject>();
+        var trend3Birds = new List<GameObject>();
+        var trend4Birds = new List<GameObject>();
+        var trend5Birds = new List<GameObject>();
         // Note that there is a sample bird
         // Intiazize the object and add it to the collection
         //the code might not be pretty but since the locations are very precise to each bird, we did it one by one
@@ -40,6 +44,18 @@ public class BirdPrefabControl : MonoBehaviour
         trend1Birds.Add(bird3);
         trend1Birds.Add(bird4);
         trend1Birds.Add(bird5);
+        trend2Birds.Add(bird6);
+        trend2Birds.Add(bird7);
+        trend2Birds.Add(bird8);
+        trend2Birds.Add(bird9);
+        trend3Birds.Add(bird10);
+        trend3Birds.Add(bird11);
+        trend3Birds.Add(bird12);
+        trend4Birds.Add(bird13);
+        trend4Birds.Add(bird14);
+        trend5Birds.Add(bird15);
+
+
         bird1.transform.position = new Vector3(1, 1, 1);
         bird2.transform.position = new Vector3(4, 1, 1);
         bird3.transform.position = new Vector3(7, 1, 1);

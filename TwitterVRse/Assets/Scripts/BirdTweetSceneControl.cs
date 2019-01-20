@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Twity;
+using UnityEngine.UI;
 using UnityEngine.Windows.Speech;
 
 
@@ -21,7 +22,7 @@ public class BirdTweetSceneControl : MonoBehaviour
     //private TextMesh m_Hypotheses;
 
     [SerializeField]
-    private TextMesh m_Recognitions;
+    private Text m_Recognitions;
 
     public DictationRecognizer m_DictationRecognizer;
 
@@ -104,7 +105,7 @@ public class BirdTweetSceneControl : MonoBehaviour
         m_DictationRecognizer.DictationResult += (text, confidence) =>
         {
             Debug.LogFormat("Dictation result: {0}", text);
-            m_Recognitions.text += text + "\n";
+            m_Recognitions.text += text.ToString() + "\n";
             Debug.Log("text length: " + m_Recognitions.text.Length);
             Debug.Log(OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, OVRInput.Controller.RTouch));
 
